@@ -1,0 +1,264 @@
+body {
+    background-image: url(./IMG.jpeg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+
+.sun {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 3em orangered;
+    background: radial-gradient(#ffcc00 0%, #ff6600 60%, #000 100%);
+}
+
+
+
+.mercury {
+    background-image: url(./Mercury.png);
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    animation: mercury 11s linear infinite;
+}
+
+.venus {
+    position: absolute;
+    background-image: url(./venus.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 40%;
+    transform: translate(-100%, -400%);
+    animation: venus 8s linear infinite;
+}
+
+.earthcont {
+    width: 250px;
+    height: 250px;
+    /* position: absolute; */
+    top: 25%;
+    left: -100%;
+}
+
+.earth {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(./Earth.png);
+    background-size: cover;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    animation: earth 15s linear infinite;
+}
+
+
+.moon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url(./Moon.png);
+    background-size: cover;
+    box-shadow: 0px 0px 10px white;
+    position: absolute;
+    top: 40%;
+    left: -60%;
+    z-index: -2;
+    animation: moon 8s linear infinite;
+    box-shadow: inset -1px 1px 10px 1px black;
+}
+
+.satan {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    right: 50%;
+    left: 30%;
+    background-image: url(./10241.jpeg);
+    background-size: cover;
+    box-shadow: 0 0 20px red, 0 0 40px darkred;
+    animation: satan 20s linear infinite;
+}
+
+.satan::after {
+    content: '';
+    width: 120%;
+    height: 50%;
+    box-shadow: -1px 10px 10px darkred;
+    border-bottom: 2px solid yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: ring 5s linear infinite;
+}
+
+.satan::before {
+    content: '';
+    width: 120%;
+    height: 50%;
+    box-shadow: -1px 10px 10px darkred;
+    box-shadow: -4px 20px 10px rgb(192, 126, 4);
+    position: absolute;
+    transform: rotate(45deg);
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: ring 5s linear infinite;
+}
+
+
+@keyframes venus {
+    0% {
+        transform: translate(0px, 0%) rotate(0deg);
+        z-index: -1;
+    }
+
+    25% {
+        transform: translate(300px, -10%) rotate(90deg);
+        z-index: -1;
+    }
+
+    50% {
+        transform: translate(600px, 0) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(300px, 10%) rotate(270deg);
+        z-index: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0%) rotate(360deg);
+        z-index: 1;
+    }
+}
+
+@keyframes mercury {
+    0% {
+        transform: translate(0px, 0%) rotate(0deg);
+        z-index: -1;
+    }
+
+    25% {
+        transform: translate(300px, -50%) rotate(90deg);
+        z-index: -1;
+    }
+
+    50% {
+        transform: translate(600px, 0) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(300px, 50%) rotate(270deg);
+        z-index: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0%) rotate(360deg);
+        z-index: 1;
+    }
+}
+
+@keyframes earth {
+    0% {
+        transform: translate(0px, 0%) rotate(0deg);
+        z-index: -1;
+    }
+
+    25% {
+        transform: translate(500px, -70%) rotate(90deg);
+        z-index: -1;
+    }
+
+    50% {
+        transform: translate(1000px, 0) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(500px, 70%) rotate(270deg);
+        z-index: 1;
+    }
+
+    100% {
+        transform: translate(0px, 0%) rotate(360deg);
+        z-index: 1;
+    }
+}
+
+@keyframes moon {
+
+
+    0% {
+        transform: translate(-50%, -50%) translate(00px, 0) rotate(0deg);
+        /* Start position */
+        z-index: 0;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translate(200px, 0) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) translate(0px, 0) rotate(360deg);
+        /* Complete a full rotation */
+        z-index: 1;
+    }
+
+
+}
+
+
+@keyframes satan {
+    0% {
+        transform: translate(0px, 0%) rotate(0deg);
+        z-index: -100;
+    }
+
+    25% {
+        transform: translate(350px, -10%) rotate(90deg);
+        z-index: -100;
+    }
+
+    50% {
+        transform: translate(700px, 0) rotate(180deg);
+    }
+
+    75% {
+        transform: translate(350, 50%) rotate(270deg);
+        z-index: 100;
+    }
+
+    100% {
+        transform: translate(0px, 0%) rotate(360deg);
+        z-index: 100;
+    }
+}
+
+@keyframes ring {
+    0% {
+        transform: rotate('0deg');
+    }
+
+    100% {
+        transform: rotate('360deg');
+    }
+}
